@@ -11,9 +11,8 @@ const PORT = 3000;
 const MONGODB_URL = 'mongodb://localhost:27017/';
 
 
-mongoose.connect(MONGODB_URL, 
-    {useNewUrlParser: true, 
-    useUnifiedTopology: true}).then(() => console.log('Connected succesfully'))
+mongoose.connect(MONGODB_URL)
+    .then(() => console.log('Connected succesfully'))
     .catch(err => console.log(err));
 
 app.use(bodyParser.json());
